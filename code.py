@@ -10,7 +10,7 @@ sys_prompt = 'You are an helpful customer service assistant, look through this w
 and answer any questions a customer will have.'
 
 def chat(message, history):
-    messages = [{'role':'system', 'content':system}]
+    messages = [{'role':'system', 'content':sys_prompt}]
     for user_message, assistant_message in history:
         messages.append({'role':'user', 'content':user_message})
         messages.append({'role':'assistant', 'content':assistant_message})
